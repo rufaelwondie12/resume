@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G/Rufael Wondie - Full Stack Resume</title>
+    <style>
+      :root {
+        --primary: #0563bb;
+        --secondary: #272829;
+        --text: #444444;
+        --border: #dce8f2;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: #e9ecef;
+        margin: 0;
+        padding: 40px 0;
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      .resume-page {
+        width: 210mm; /* A4 Width */
+        min-height: 297mm;
+        margin: 0 auto;
+        background: white;
+        padding: 40px;
+        box-sizing: border-box;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 2px solid var(--primary);
+        padding-bottom: 20px;
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        margin: 0;
+        color: #111;
+        font-size: 32px;
+        text-transform: uppercase;
+      }
+      h2 {
+        margin: 5px 0;
+        color: var(--primary);
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 2px;
+      }
+
+      .contact-bar {
+        margin-top: 15px;
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .contact-bar a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      section {
+        margin-bottom: 22px;
+      }
+      h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #111;
+        border-left: 4px solid var(--primary);
+        padding-left: 10px;
+        text-transform: uppercase;
+        background: #f4f7fa;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .item {
+        margin-bottom: 15px;
+      }
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        color: #222;
+      }
+      .item-sub {
+        color: var(--primary);
+        font-style: italic;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      ul {
+        padding-left: 18px;
+        margin: 5px 0;
+      }
+      li {
+        margin-bottom: 4px;
+        font-size: 14px;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .tag {
+        font-size: 12px;
+        background: #f0f0f0;
+        padding: 2px 8px;
+        border-radius: 3px;
+        display: inline-block;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+      }
+
+      @media print {
+        body {
+          background: none;
+          padding: 0;
+        }
+        .resume-page {
+          box-shadow: none;
+          margin: 0;
+          width: 100%;
+          padding: 20px;
+        }
+        .contact-bar a {
+          color: var(--primary) !important;
+          text-decoration: underline !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-page">
+      <header>
+        <h1>G/Rufael Wondie</h1>
+        <h2>Full Stack Web Developer</h2>
+        <div class="contact-bar">
+          <a href="mailto:rufaelyaya@gmail.com">rufaelyaya@gmail.com</a> |
+          <a href="tel:+251989195269">+251-989195269</a> |
+          <a href="https://github.com/rufaelwondie12">GitHub</a> |
+          <a href="https://www.linkedin.com/in/gebre-rufael-wondie-375675153/"
+            >LinkedIn</a
+          >
+          |
+          <a href="https://twitter.com/yourprofile">Twitter</a>
+        </div>
+      </header>
+
+      <section>
+        <h3>Professional Summary</h3>
+        <p style="font-size: 14px; margin: 0">
+          Software engineer with proven experience in full-stack web development
+          and building solutions for projects of all sizes. Specialized in
+          modern JavaScript ecosystems and scalable backend architectures.
+        </p>
+      </section>
+
+      <section>
+        <h3>Technical Skills</h3>
+        <div class="skills-grid">
+          <div style="font-size: 14px">
+            <strong>Front-End:</strong> React, Redux, JavaScript (ES6+), jQuery,
+            HTML5, CSS3, Bootstrap, Tailwind
+          </div>
+          <div style="font-size: 14px">
+            <strong>Back-End:</strong> Node.js, Express, Ruby on Rails, MySQL,
+            PostgreSQL, MongoDB
+          </div>
+          <div style="font-size: 14px">
+            <strong>Tools:</strong> Git, Docker, GitHub Actions, Webpack, TDD,
+            Jest, Netlify, Render
+          </div>
+          <div style="font-size: 14px">
+            <strong>Professional:</strong> Remote Pair-Programming, Mentoring,
+            Agile Methodology
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Work Experience</h3>
+
+        <div class="item">
+          <div class="item-header"><span>Apple</span> <span>Remote</span></div>
+          <div class="item-sub">React Developer</div>
+          <li style="font-size: 14px">
+            Developed high-performance user interfaces and reusable components
+            using React for internal design systems.
+          </li>
+          <div class="tag">React, Redux, Tailwind CSS, Jest</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header"><span>Amazon</span> <span>Remote</span></div>
+          <div class="item-sub">Full Stack Developer</div>
+          <li style="font-size: 14px">
+            Engineered scalable backend microservices and responsive frontend
+            dashboards with automated CI/CD deployment pipelines.
+          </li>
+          <div class="tag">Node.js, React, Docker, GitHub Actions, Render</div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Featured Projects</h3>
+        <div class="item">
+          <div class="item-header">
+            <span>Netflix Clone</span> <span>2025</span>
+          </div>
+          <p style="font-size: 14px; margin: 2px 0">
+            A high-fidelity video streaming application featuring dynamic
+            content fetching, user authentication, and a responsive movie
+            slider.
+          </p>
+          <div class="tag">
+            React, Firebase Auth, TMDB API, CSS/Styled Components
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header"><span>Evangadi Forum</span></div>
+          <p style="font-size: 14px; margin: 2px 0">
+            Full-stack discussion portal for student technical knowledge
+            sharing.
+          </p>
+          <div class="tag">MERN Stack (MySQL, Express, React, Node)</div>
+        </div>
+        <div class="item">
+          <div class="item-header">
+            <span>Recipe Finder</span> <span>2025 </span>
+          </div>
+          <p style="font-size: 14px; margin: 2px 0">
+            Web application for restaurant food item management and discovery.
+          </p>
+          <div class="tag">JavaScript, WebPack, Bootstrap</div>
+        </div>
+        <div class="item">
+          <div class="item-header"><span>Math Magicians & Web Conf</span></div>
+          <p style="font-size: 14px; margin: 2px 0">
+            React-based calculator and responsive event management pages.
+          </p>
+          <div class="tag">React, HTML5, CSS3, Bootstrap</div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Mentorship & Leadership</h3>
+        <div class="item">
+          <div class="item-header">
+            <span>Microverse</span> <span>2023 – 2024</span>
+          </div>
+          <div class="item-sub">Remote Mentor (Volunteer)</div>
+          <ul>
+            <li>
+              Mentoring junior developers and providing technical code reviews.
+            </li>
+            <li>
+              Proposing architectural improvements for quality and performance.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>Education</h3>
+        <div class="item">
+          <div class="item-header">
+            <span>Evangadi Tech</span> <span>2025 – Present</span>
+          </div>
+          <div class="item-sub">Full Stack Web Development Program</div>
+        </div>
+        <div class="item">
+          <div class="item-header">
+            <span>Debre Tabor University</span> <span>2017 – Present</span>
+          </div>
+          <div class="item-sub">Lecturer & Web Application Developer</div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
