@@ -16,15 +16,41 @@
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         background-color: #e9ecef;
         margin: 0;
-        padding: 40px 0;
         color: var(--text);
         line-height: 1.5;
       }
 
+      .no-print-nav {
+        background: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .btn-download {
+        background: var(--primary);
+        color: white;
+        padding: 8px 18px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      .btn-download:hover {
+        background: #044d91;
+      }
+
       .resume-page {
-        width: 210mm; /* A4 Width */
+        width: 210mm;
         min-height: 297mm;
-        margin: 0 auto;
+        margin: 20px auto;
         background: white;
         padding: 40px;
         box-sizing: border-box;
@@ -75,11 +101,9 @@
         margin-bottom: 10px;
         color: #111;
         border-left: 4px solid var(--primary);
-        padding-left: 10px;
+        padding: 5px 10px;
         text-transform: uppercase;
         background: #f4f7fa;
-        padding-top: 5px;
-        padding-bottom: 5px;
       }
 
       .item {
@@ -123,41 +147,68 @@
         border: 1px solid #ddd;
       }
 
-      @media print {
+      /* --- CORRECTED MEDIA QUERIES (OUTSIDE EACH OTHER) --- */
+
+      /* 1. Mobile & Tablet Styles (Screen only) */
+      @media screen and (max-width: 210mm) {
         body {
-          background: none;
+          background-color: white;
+        }
+        .resume-page {
+          width: 100%;
+          margin: 0;
+          box-shadow: none;
+          padding: 20px;
+          min-height: auto;
+        }
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+        .item-header {
+          flex-direction: column;
+        }
+        h1 {
+          font-size: 26px;
+        }
+      }
+
+      /* 2. Print Styles (When saving to PDF) */
+      @media print {
+        .no-print-nav {
+          display: none !important;
+        }
+        body {
+          background: white;
+          margin: 0;
           padding: 0;
         }
         .resume-page {
-          box-shadow: none;
-          margin: 0;
           width: 100%;
-          padding: 20px;
+          margin: 0;
+          padding: 15mm;
+          box-shadow: none;
         }
-        .contact-bar a {
-          color: var(--primary) !important;
-          text-decoration: underline !important;
+        h3 {
+          background: #f4f7fa !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
         }
       }
     </style>
   </head>
   <body>
-    <div style="text-align: center; margin-bottom: 10px" class="no-print">
+    <nav class="no-print-nav">
+      <span style="font-weight: bold; color: var(--secondary)"
+        >G/Rufael Wondie | Portfolio</span
+      >
       <a
         href="resume.pdf"
         download="G_Rufael_Wondie_Resume.pdf"
-        style="
-          background: var(--primary);
-          color: white;
-          padding: 8px 16px;
-          text-decoration: none;
-          border-radius: 4px;
-          font-size: 14px;
-        "
+        class="btn-download"
       >
-        Download PDF Version
+        Download PDF
       </a>
-    </div>
+    </nav>
     <div class="resume-page">
       <header>
         <h1>G/Rufael Wondie</h1>
